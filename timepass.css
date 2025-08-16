@@ -1,0 +1,210 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to bottom right,
+   #352323 25%,
+   #ca7623 100%);
+  color: #ffffff;
+  line-height: 1.6;
+   text-shadow: 10px 15px 10px #000000;
+}
+
+.owner-image {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.owner-image img {
+  width: 200px;  
+  max-width: 80%;
+  border-radius: 12px;   
+  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+}
+
+
+.navbar {
+  background: #c62828;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 2rem;
+}
+
+.navbar h3 {
+  font-size: 1.2rem;
+}
+
+.date-btn {
+  background: white;
+  color: #c62828;
+  border: none;
+  padding: 0.4rem 1.2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  
+}
+
+.date-btn:hover {
+  background: #f8d7da;
+}
+
+
+.marquee-container {
+  background: none;
+  padding: 0.5rem 0;
+  overflow: hidden;
+}
+
+.marquee-text {
+  font-size: 1rem;
+  color: #c62828;
+  animation: marquee 10s linear infinite;
+  white-space: nowrap;
+  text-align: center;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.marquee-text span {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+
+.logo-header {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.logo-svg text {
+  font-size: 1.5rem;
+  fill: #c62828;
+  font-weight: bold;
+}
+
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.content {
+  background: none;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 9px 13px 1111px white;
+  text-align: center;
+  font-family: "Edu NSW ACT Cursive", cursive;
+  font-size: 1.2rem;
+  
+}
+
+
+h2 {
+  text-align: center;
+  margin: 1.5rem 0;
+  color: #134b42;
+  font-weight: bold;
+}
+
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-item {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.gallery-item.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.caption {
+  padding: 0.5rem;
+  font-weight: bold;
+  background: #fce4ec;
+  color: #ff8210;
+}
+
+
+.footer {
+  background: #c62828;
+  color: white;
+  padding: 2rem 0;
+  margin-top: 2rem;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  width: 90%;
+  margin: auto;
+}
+
+.footer-logo {
+  font-family: "Edu NSW ACT Cursive", cursive;
+}
+
+.footer-column h3 {
+  margin-bottom: 0.5rem;
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+.footer-column ul li {
+  margin-bottom: 0.3rem;
+}
+
+.footer-column a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .marquee-text {
+    font-size: 0.9rem;
+  }
+}
